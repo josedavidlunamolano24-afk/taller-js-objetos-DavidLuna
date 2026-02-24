@@ -115,3 +115,52 @@
     Hace el código **más claro**, **más corto** y permite usar solo los datos necesarios.
 
 
+16. Desestructuración en función
+
+    ¿Por qué no necesitas usar punto dentro del return?
+    Porque al desestructurar, las propiedades ya están guardadas en variables directas, no dentro del objeto.
+
+    ¿Qué ocurre si el objeto no tiene esa propiedad?
+    El valor será undefined y, si es una propiedad anidada inexistente, puede causar un error si no se valida.
+
+17. Renombramiento
+
+    ¿Qué es el renombramiento?**
+    Es cuando, al desestructurar, se le asigna un **nombre diferente** a una propiedad para guardarla en una variable.
+
+    ¿Cuándo es útil cambiar el nombre de una variable?**
+    Cuando quieres **evitar conflictos de nombres**, hacer el código **más claro** o usar nombres **más descriptivos**.
+
+
+18. Copia con spread
+
+    ¿Qué hace el operador spread (`...`)?
+    Permite **copiar y combinar** objetos o arreglos expandiendo sus propiedades o valores en uno nuevo.
+
+    ¿La copia es profunda o superficial?
+    La copia que hace el operador spread es **superficial**, no profunda; los objetos anidados siguen compartiendo referencia.
+
+19. Copiar objeto anidado
+
+    ¿Por qué se debe copiar también el objeto interno?
+    Porque el operador spread solo hace una **copia superficial**. Si no copias el objeto interno, ambos objetos compartirán la **misma referencia**.
+
+    ¿Qué pasa si no lo haces?
+    Si modificas el objeto interno en la copia, **también se modificará el objeto original**, causando efectos no deseados.
+
+
+20. Desestructuración completa
+
+    ¿Qué tan recomendable es hacer desestructuración muy larga?
+    No es muy recomendable, porque vuelve el código **difícil de leer y mantener**.
+
+    ¿Cuándo es mejor dividir la desestructuración?
+    Cuando el objeto es **muy grande**, tiene **muchos niveles** o necesitas **claridad** en el código.
+
+    ¿Qué errores comunes se pueden cometer?
+
+    * Desestructurar propiedades que **no existen** (da `undefined` o error).
+    * Confundirse con los **nombres de las propiedades**.
+    * Hacer desestructuración **demasiado compleja** en una sola línea.
+
+
