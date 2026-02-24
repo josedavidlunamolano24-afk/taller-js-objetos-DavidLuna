@@ -187,3 +187,82 @@ let carro5 = {
 };
 
 mostrarPropietario(carro5);
+
+
+/* 17. Renombramiento */
+
+let persona = {
+  nombre: "David",
+  edad: 20,
+  ciudad: "Puelenje"
+};
+
+let { nombre: nombrePersona, edad: edadPersona } = persona;
+
+console.log(nombrePersona);
+console.log(edadPersona);
+
+
+/* 18. Copia con spread */
+
+let persona = {
+  nombre: "David",
+  edad: 20,
+  ciudad: "Puelenje"
+};
+
+// Copia usando spread
+let copiaPersona = { ...persona };
+
+// Cambiamos una propiedad en la copia
+copiaPersona.edad = 25;
+
+console.log(persona);       // objeto original
+console.log(copiaPersona);  // objeto copiado
+
+
+/* 19. Copiar objeto anidado */
+
+let persona = {
+  nombre: "David",
+  edad: 20,
+  direccion: {
+    ciudad: "Cali",
+    barrio: "Puelenje"
+  }
+};
+
+let copiaPersona = {
+  ...persona,
+  direccion: {
+    ...persona.direccion
+  }
+};
+
+copiaPersona.direccion.ciudad = "Popayán";
+
+console.log(persona.direccion.ciudad);      
+console.log(copiaPersona.direccion.ciudad); 
+
+
+/* 20. Desestructuración completa */
+
+function mostrarLibro({
+  titulo,
+  autor: { nombreAutor },
+  editorial: { nombreEditorial }
+}) {
+  return `El libro "${titulo}" fue escrito por ${nombreAutor} y publicado por la editorial ${nombreEditorial}.`;
+}
+
+let libro = {
+  titulo: "JavaScript Básico",
+  autor: {
+    nombreAutor: "David Luna"
+  },
+  editorial: {
+    nombreEditorial: "TechBooks"
+  }
+};
+
+mostrarLibro(libro);
