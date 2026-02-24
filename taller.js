@@ -157,3 +157,33 @@ console.log(eedad);
 
 
 /* 15. Parámetro desestructurado */
+
+function mostrarDatos({ nombre, edad }) {
+  console.log(nombre);
+  console.log(edad);
+}
+
+let persona = {
+  nombre: "David",
+  edad: 20,
+  ciudad: "Puelenje"
+};
+
+mostrarDatos(persona);
+
+
+/* 16. Desestructuración en función */
+
+function mostrarPropietario({ propietario: { nombre, edad } }) {
+  return `Propietario: ${nombre}, Edad: ${edad}`;
+}
+
+let carro5 = {
+  marca: "Toyota",
+  propietario: {
+    nombre: "David",
+    edad: 20
+  }
+};
+
+mostrarPropietario(carro5);

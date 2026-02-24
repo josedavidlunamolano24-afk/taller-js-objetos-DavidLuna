@@ -61,4 +61,57 @@
 
     ¿Cómo se accede a una propiedad dentro de otro objeto?
     Se accede usando notación punto encadenada, es decir, un punto por cada nivel del objeto.
-    
+
+10. Función (SIN DESESTRUCTURACIÓN)
+
+    ¿Qué ocurre si la propiedad no existe?
+    Si la propiedad no existe, el valor obtenido será undefined.
+
+    ¿Por qué es importante validar datos?
+    Es importante validar datos porque ayuda a evitar errores, mejorar la seguridad y asegurar que el programa funcione correctamente al recibir información válida.
+
+11. Modificar propiedad
+
+    ¿Cómo se modifica una propiedad?
+    Una propiedad se modifica asignándole un nuevo valor usando punto o corchetes.
+
+    ¿Qué diferencia hay entre modificar y copiar un objeto como harías la copia sin spread investiga?
+    Modificar un objeto cambia directamente el objeto original.
+    Copiar un objeto crea uno nuevo para no afectar el original.
+    Sin spread, la copia se hace con Object.assign().
+
+12. Desestructuración
+
+    ¿Qué es desestructuración?
+    La **desestructuración** es una forma de **extraer valores de objetos o arreglos** y guardarlos en **variables** de manera rápida y sencilla.
+
+    ¿Qué ventaja tiene frente al acceso con punto?
+    La **desestructuración** tiene ventaja frente al acceso con punto porque hace el código **más corto**, **más claro** y evita repetir muchas veces `objeto.propiedad`.
+
+13. Desestructuración de objeto carro
+
+    ¿Qué pasa si el nombre de la variable no coincide con la propiedad?
+    Si el **nombre de la variable no coincide con la propiedad**, el valor será **`undefined`**, porque JavaScript no encuentra esa propiedad con ese nombre.
+
+
+    ¿Es obligatorio usar el mismo nombre?
+    No, no es obligatorio usar el mismo nombre. Puedes usar un alias al desestructurar para darle otro nombre a la variable.
+
+
+14. Desestructuración
+
+    ¿Por qué se usan llaves dentro de llaves?
+    Porque se está desestructurando un objeto que está dentro de otro objeto.
+
+    ¿Qué significa el anidamiento en desestructuración?
+    Significa extraer propiedades de objetos internos directamente, sin usar notación punto.
+
+15. Parámetro desestructurado
+
+    ¿Qué significa desestructurar en el parámetro?**
+    Significa **extraer las propiedades del objeto directamente en la definición de la función**.
+
+    ¿Qué ventaja tiene esta técnica?**
+    Hace el código **más claro**, **más corto** y permite usar solo los datos necesarios.
+
+
