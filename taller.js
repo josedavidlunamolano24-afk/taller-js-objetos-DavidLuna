@@ -72,3 +72,88 @@ let estudiante={
 };
 console.log(estudiante.notas.matematicas);
 console.log(estudiante.notas.español);
+
+/* 9. Objeto carro */
+
+let carro={
+    marca:"lamborghini",
+    modelo:"svj",
+
+    propietario:{
+        nombre:"david",
+        edad:22
+    }
+};
+console.log(carro.propietario.nombre);
+
+
+/* 10. Función (SIN DESESTRUCTURACIÓN) */
+
+let carro1 = {
+  marca: "Toyota",
+  propietario: {
+    nombre: "David",
+  }
+};
+
+function mostrarCarro({ marca, propietario: { nombre} }) {
+  console.log(`El carro es un ${marca}. su propietario es ${nombre}.`);
+}
+mostrarCarro(carro1);
+
+
+/* 11. Modificar propiedad */
+
+persona={
+    nombre: "andres",
+    edad: 30,
+    profesion: "profesor",
+}
+console.log(persona);
+persona.edad=31;
+console.log(persona);
+
+
+/* 12. Desestructuración */
+
+let persona = {
+  nombre: "David",
+  profesion: "Desarrollador",
+}
+function info({ nombre, profesion }) {
+  return `El nombre es ${nombre}, su profesion es ${profesion}.`;
+}
+console.log(info(persona));
+
+
+/* 13. Desestructuración de objeto carro */
+
+let carroo = {
+  marca: "Toyota",
+  modelo: "Corolla",
+  color: "Rojo"
+};
+
+let { marca, modelo } = carroo;
+
+console.log(marca);
+console.log(modelo);
+
+
+/* 14. Desestructuración */
+
+let carro3 = {
+  marca: "Toyota",
+  propietario: {
+    nombree: "David",
+    eedad: 20
+  }
+};
+
+let { propietario: { nombree, eedad } } = carro3;
+
+console.log(nombree);
+console.log(eedad);
+
+
+/* 15. Parámetro desestructurado */
